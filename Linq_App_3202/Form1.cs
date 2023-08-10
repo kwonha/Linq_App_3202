@@ -43,16 +43,42 @@ namespace Linq_App_3202
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            productBindingSource.DataSource = products;
         }
         private void button1_Click(object sender, EventArgs e)
         {
-
+            productBindingSource.DataSource = from item in products
+                                              select item;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            productBindingSource.DataSource = from item in products
+                                              orderby item.Name
+                                              select item;
+        }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            productBindingSource.DataSource = from item in products
+                                              orderby item.Price descending
+                                              select item;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            productBindingSource.DataSource = from item in products
+                                              where item.Price >= 8000
+                                              orderby item.Price descending
+                                              select item;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            productBindingSource.DataSource = from item in products
+                                              where item.Type == "식사" 
+                                              orderby item.Name
+                                              select item;
         }
     }
 }

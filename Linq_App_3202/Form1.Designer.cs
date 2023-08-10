@@ -35,10 +35,10 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -74,7 +74,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(158, 85);
             this.button2.TabIndex = 2;
-            this.button2.Text = "이름을 오름차순 정렬";
+            this.button2.Text = "이름 오름차순 정렬";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -86,6 +86,7 @@
             this.button3.TabIndex = 3;
             this.button3.Text = "가격 내림차순 정렬";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -93,21 +94,19 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(158, 85);
             this.button4.TabIndex = 4;
-            this.button4.Text = "가격 8000원 이상인 것만 오름차순 정렬";
+            this.button4.Text = "가격 8000원 이상인 것만 내림차순 정렬";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(638, 362);
+            this.button5.Location = new System.Drawing.Point(638, 361);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(158, 85);
             this.button5.TabIndex = 5;
-            this.button5.Text = "식사류만 오름차순 정렬";
+            this.button5.Text = "식사류만\r\n 이름 오름차순 정렬";
             this.button5.UseVisualStyleBackColor = true;
-            // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataSource = typeof(Linq_App_3202.Product);
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -126,6 +125,10 @@
             this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
             this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
             this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(Linq_App_3202.Product);
             // 
             // Form1
             // 
